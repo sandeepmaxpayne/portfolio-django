@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+{% load staticfiles %}
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v3.8.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="4.3">
+
+<title>Examples · Bootstrap</title>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/">
+
+<!-- Bootstrap core CSS -->
+
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+      <!-- Documentation extras -->
+
+
+
+<!-- Favicons -->
+
+
+<link rel="apple-touch-icon" href="/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.3/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.3/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+     <!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Examples">
+<meta name="twitter:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta name="twitter:image" content="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-social-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.3/examples/">
+<meta property="og:title" content="Examples">
+<meta property="og:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://getbootstrap.com/docs/4.3/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+
+
+
+  </head>
+  <body>
+    <a class="skippy sr-only sr-only-focusable" href="#content">
+  <span class="skippy-text">Skip to main content</span>
+</a>
+
+
+    <header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'home' %}">Sandeep Dutta</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://twitter.com/sandeep28484768">Twitter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'allblog' %}">Blog</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+  </header>
+
+
+
+{#      <header class="d-flex flex-column flex-md-row align-items-md-center p-5 bg-light">#}
+{#  <div class="pt-md-3 pb-md-4">#}
+{#    <h1 class="bd-title mt-0">Examples</h1>#}
+{#    <p class="bd-lead">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p><a href="https://github.com/twbs/bootstrap/archive/v4.3.1.zip" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">Download source code</a></div>#}
+{##}
+{#</header>#}
+
+<main class="bd-content p-5" id="content" role="main">
+<section class="jumbotron text-center">
+    <h2 style="text-align: center"><i>Hi! I am Sandeep</i></h2>
+    <p style="text-align: center">😁😁Hey, my name is <u><b>Sandeep Dutta</b></u> and I love to make <b>Django</b> and <b>Android</b> Projects. Its the challenging thing that people wants.😁😁</p>
+    <br>
+    <a href="mailto:sandeepduttacse45@gmail.com" class="btn btn-primary my-2">Email Me</a>
+    <br/>
+    <img src="{% static 'sandeep.jpg'  %}" height="300" width="300" />
+</section>
+
+ <div class="row">
+{% for newjob in job.all %}
+
+
+  <div class="card mb-3">
+
+       <div class="card-body">
+
+    <div class="card border-primary mb-3" style="max-width: 25rem;">
+{#  <div class="card-header">Header</div>#}
+        <div class="hovereffect">
+
+            <link rel="stylesheet" type="text/css" href="{% static 'hover.css' %}"/>
+            <img class="card-img-top" src="{{ newjob.image.url }}" alt="Card image cap" height="450" width="450" >
+
+
+
+
+            </div>
+            <div class="card-body text-success">
+    <h5 class="card-title"></h5>
+    <p class="card-text">{{ newjob.summary }}</p>
+  </div>
+</div>
+  </div>
+    </div>
+
+
+    {% endfor %}
+     </div>
+
+
+
+
+
+</main>
+
+
+
+
+
+    <footer class="bd-footer text-muted">
+  <div class="container text-center">
+   <p>© Sandeep Dutta {% now "Y" %}</p>
+
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+ </body>
+</html>
