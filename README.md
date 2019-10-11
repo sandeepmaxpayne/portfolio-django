@@ -1,8 +1,8 @@
 					**Portfolio Website**
 
-__ This project is done using django__
+__This small website Project is done using django__
 
-TO run the project :
+To setup the project :
 
 First download the project or clone it using the below command
 
@@ -18,7 +18,10 @@ To add user or any media files such as image just enter into the admin 'http://1
 
 * To start with django setup :
 
-> pip install Django==2.2.6
+>pip install Django==2.2.6
+
+* To find out the installed dependencies
+>pip freeze
 
 
 
