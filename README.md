@@ -23,5 +23,5 @@ To add user or any media files such as image just enter into the admin 'http://1
 * To find out the installed dependencies
 >pip freeze
 
-
+# link to the webapp : "https://sandeep-bio.herokuapp.com/"
 
